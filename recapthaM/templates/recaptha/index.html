@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+
+    <!-- fonte do boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--recaptcha-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+
+<body class="bg-info">
+<footer class=" pt-1  ">
+    <div class="container ">
+            <div class="row">
+            <!--formulario-->
+            <div class="col-md-6 " >
+                <h1 class="text-white  text-center">
+                    Formulario de contato
+                </h1>
+                <div class="bg-white card  ml-auto mr-auto card-body pt-5 ">
+                       
+                        <form action="/" method="post"> {% csrf_token %}
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" id="inputEmail3" placeholder="Nome"
+                                        name="nome"  value="teste" >
+                            </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" id="inputPassword3"
+                                        placeholder="E-mail" name="email" value="teste@teste.com" >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" id="inputPassword3"
+                                        placeholder="Assunto" name="assunto"  value="teste">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <textarea class="form-control" rows="5" id="comment" placeholder="Mensagem"
+                                        name="mensagem" ></textarea> 
+                                        <div class="g-recaptcha mt-4 g-recaptcha-response" data-sitekey="6LfE8OYUAAAAALDnyPkWCFaDWa0kyjlHi0H9UENt"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-10">
+                                    <button type="submit" value="Submit" class="btn bg-success text-white"
+                                        name="enviar">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+            </div>
+
+
+    </div>
+
+            </div>
+            
+    </div>
+
+</footer>
+
+</body>
+<!--bootstrap-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>
